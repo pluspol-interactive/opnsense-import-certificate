@@ -43,7 +43,7 @@ if (trim(cert_get_subject($certificate, false)) != "CN=".$hostname.",") {
 	echo "The certificate subject does not match the hostname $hostname.\r\n".cert_get_subject($certificate, false)."\r\n";
 	die(1);
 }
-if (trim(cert_get_issuer($certificate, false)) != "O=Let's Encrypt, CN=R3, C=US,") {
+if (trim(cert_get_issuer($certificate, false)) != "O=Let's Encrypt, CN=R3, C=US") {
 	echo "The certificate issuer does not match the certificate.\r\n".cert_get_issuer($certificate, false)."\r\n";
 	die(1);
 }
